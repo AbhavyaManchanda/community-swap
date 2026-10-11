@@ -1,0 +1,49 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-stone-50 text-stone-800;
+  }
+}
+
+/* Custom Print Stylesheet for Printable Swap Pass */
+@media print {
+  /* Hide all UI elements, navbar, buttons, and headers when printing */
+  .no-print, nav, footer, button, .tab-bar, .alert-box {
+    display: none !important;
+  }
+
+  body {
+    background: white !important;
+    color: black !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  /* Make swap pass clean, high-contrast and perfectly sized for standard paper */
+  .printable-pass-container {
+    box-shadow: none !important;
+    border: 2px dashed #000 !important;
+    margin: 1cm auto !important;
+    padding: 1.5cm !important;
+    width: 100% !important;
+    max-width: 19cm !important;
+    page-break-inside: avoid;
+    background: white !important;
+  }
+
+  .ticket-perforation {
+    border-top: 2px dashed #333 !important;
+  }
+}
+
+/* Tactile Perforation Style */
+.perforated-border {
+  background-image: linear-gradient(to right, #78716c 50%, rgba(255, 255, 255, 0) 0%);
+  background-position: top;
+  background-size: 14px 2px;
+  background-repeat: repeat-x;
+}
+

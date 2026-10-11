@@ -1,0 +1,39 @@
+# Node / Frontend
+node_modules/
+frontend/node_modules/
+frontend/dist/
+.npm
+package-lock.json.backup
+
+# Python / Backend
+__pycache__/
+backend/__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+.venv/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# SQLite local database & test runs
+backend/comm_swap.db
+backend/comm_swap.db-journal
+*.db
+*.sqlite3
+
+# Environment & secrets
+.env
+.env.local
+.env.*.local
+*.env
+
+# IDE & OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+*.log
